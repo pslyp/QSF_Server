@@ -1,0 +1,19 @@
+{
+  "name": "quailsf",
+  "version": "1.0.0",
+  "description": "Project Quail Smart Farm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "PSlyp",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dgram": "^1.0.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.7.7",
+    "mqtt": "^2.18.8"
+  }
+}

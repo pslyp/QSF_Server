@@ -1,0 +1,27 @@
+﻿header - "Content-Type: application/json"
+data   - '{"name": "Non", "brightnessSen": 60, "temperatureSen": 35, "fanCon": "on", "lampCon": "off"}'
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Non", "brightnessSen": 60, "temperatureSen": 35, "fanCon": "on", "lampCon": "off"}' localhost:3000/data
+
+{
+	"name": "Non4",
+
+	"brightnessSen": 46.25,
+
+	"temperatureSen": 37.75,
+
+	"fanCon": "on",
+
+	"lampCon": "off"
+
+}
+
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -d '{"name": "ffssf"}' https://quailsmartfarm.herokuapp.com/test
+
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "name=NNN" https://quailsmartfarm.herokuapp.com/test
+
+POST /fcm/send HTTP/1.1\r\nHost: fcm.googleapis.com\r\ncontent-type: application/json\r\ncontent-length: 200\r\nauthorization: key=AIzaSyAFRHNLIRXjVkEHHhzkEYk3_cycj2yVkv0\r\nConnection: close\r\n\r\n{\r\n\t\"to\": \"/topics/general\",\r\n\t\"notification\":{\r\n\t\t\"title\": \"Motion detected!\",\r\n\t\t\"body\": \"An activity was registered by sensor.\",\r\n\t\t\"sound\": \"default\"\r\n\t},\r\n\t\"data\": {\r\n\t\t\"sensorValue\": \"01\"\r\n\t}\r\n}";
+
+openssl s_client -showcerts -connect quailsmartfarm.herokuapp.com:443 
+
+projectone-e075e.firebaseio.com .json?auth=GOaQlvSGxMEqZRhp4wivLmovy0QaOT1t0jNJNQYv
