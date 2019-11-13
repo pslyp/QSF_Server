@@ -97,7 +97,7 @@ exports.getBoardById = function(req, res, next) {
             }
         });
     } else {
-        User.findOne({ id: req.doc.id }, { '_id': 0, 'email': 0, 'firstname': 0, 'id': 0, 'lastname': 0, 'msgToken': 0, '__v': 0 }, function(err, doc) {
+        User.findOne({ id: req.doc.id }, { '_id': 0, 'email': 0, 'firstname': 0, 'id': 0, 'lastname': 0, 'password': 0, 'msgToken': 0, '__v': 0 }, function(err, doc) {
             if(err) {
                 return next(err);
             } else {           
