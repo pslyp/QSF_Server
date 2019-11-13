@@ -102,7 +102,7 @@ exports.getBoardById = function(req, res, next) {
                 return next(err);
             } else {           
                 if(doc.board[0] != null) {
-                    res.json({ status: 200, data: doc });
+                    res.json(doc);
                 } else {
                     res.status(204);
                     res.end();
