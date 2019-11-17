@@ -8,15 +8,15 @@ module.exports = function(app) {
         .post(user.login);   
     // app.route('/user')    
     //     .get(user.searchById); 
-    app.route('/user/board/:token')
-        .post(user.getBoardByToken);  
+    // app.route('/user/board/:token')
+    //     .post(user.getBoardByToken);  
     app.route('/user/:id/token')
         .post(user.getMsgTokenById); 
     app.route('/user/:id/board/:token')
-        .post(user.getBoardByIdAndToken)
+        .get(user.getBoardByIdAndToken)
         .put(user.updateBoard); 
-    app.route('/user/:id/board')
-        .get(user.getBoardById);           
+    // app.route('/user/:id/board')
+    //     .get(user.getBoardById);           
     app.route('/user/:id')
         .get(user.getUserById)
         // .post(user.getUserById)
