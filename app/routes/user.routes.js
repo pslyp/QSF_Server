@@ -15,8 +15,8 @@ module.exports = function(app) {
     app.route('/user/:id/board/:token')
         .get(user.getBoardByIdAndToken)
         .put(user.updateBoard); 
-    // app.route('/user/:id/board')
-    //     .get(user.getBoardById);           
+    app.route('/user/:id/board')
+        .get(user.getBoardById);           
     app.route('/user/:id')
         .get(user.getUserById)
         // .post(user.getUserById)
