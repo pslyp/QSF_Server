@@ -113,7 +113,7 @@ exports.getBoardById = function(req, res, next) {
 };
 
 exports.getBoardByToken = function(req, res, next) {
-    User.findOne({ 'board.token': req.params.token }, 'board.$', function(err, doc) {
+    User.findOne({ 'board.token': req.params.token }, { '_id': 0, 'board.$': 1 }, function(err, doc) {
         if(err) {
             res.status(400);
             res.end();
