@@ -149,11 +149,12 @@ exports.updateBoard = function(req, res, next) {
     var id = req.params.id;
     var token = req.params.token;
     var update = { 
-                   'board.$.brightness': req.body.brightness,
-                   'board.$.temperature': req.body.temperature,
-                   'board.$.timeUp': req.body.timeUp,
-                   'board.$.start': req.body.start,
-                   'board.$.end': req.body.end 
+                    'board.$.brightness': req.body.brightness,
+                    'board.$.tempMin': req.body.tempMin,
+                    'board.$.tempMax': req.body.tempMax,
+                    'board.$.timeUp': req.body.timeUp,
+                    'board.$.start': req.body.start,
+                    'board.$.end': req.body.end 
                  };
     
     User.updateOne({ id: id, 'board.token': token }, { $set: update }, function(err) {
