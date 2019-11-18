@@ -12,7 +12,8 @@ var userSchema = new Schema({
         token: String,
         name: String,
         brightness: Number,
-        temperature: Number,
+        tempMin: Number,
+        tempMax: Number,
         timeUp: String,
         start: String,
         end: String
