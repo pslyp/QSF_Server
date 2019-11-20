@@ -20,6 +20,7 @@ module.exports = function(app) {
         .put(user.insertBoardById);          
     app.route('/user/:id')
         .get(user.getUserById)
+        .put(user.updateUser);
         // .post(user.getUserById)
         // .put(user.insertBoardById);      
     app.param('id', user.parId);    

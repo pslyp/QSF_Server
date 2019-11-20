@@ -146,6 +146,18 @@ exports.getBoardByIdAndToken = function(req, res, next) {
     });
 };
 
+exports.updateUser = function(req, res, next) {
+    User.updateOne({ id: req.params.id }, { $set: { 'msgToken': req.body.msgToken } }, function(err) {
+        if(err) {
+            res.status(400);
+            res.end();
+        } else {
+            res.status(204);
+            res.end();
+        }
+    });
+}
+
 exports.updateBoard = function(req, res, next) {
     var id = req.params.id;
     var token = req.params.token;
