@@ -16,10 +16,11 @@ module.exports = function(app) {
         .get(user.getBoardByIdAndToken)
         .put(user.updateBoard); 
     app.route('/user/:id/board')
-        .get(user.getBoardById);           
+        .get(user.getBoardById)
+        .put(user.insertBoardById);          
     app.route('/user/:id')
         .get(user.getUserById)
         // .post(user.getUserById)
-        .put(user.insertBoardById);      
+        // .put(user.insertBoardById);      
     app.param('id', user.parId);    
 };
