@@ -11,6 +11,7 @@ exports.create = function(req, res, next) {
         } else {
             console.log("Create Success");
             res.status(200);
+            res.send({ message: 'Success'});
             res.end();           
         }
     });
@@ -68,7 +69,7 @@ exports.getUserById = function(req, res, next) {
 };
 
 exports.getMsgTokenById = function(req, res, next) {
-    User.findOne({ id: req.params.id }, 'msgToken', function(err, doc) {
+    User.findOne({ id: req.params.id }, { '_id': 0, 'msgToken': 1 }, function(err, doc) {
         if(err) {
             return next(err);
         } else {

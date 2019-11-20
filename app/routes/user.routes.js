@@ -11,7 +11,7 @@ module.exports = function(app) {
     app.route('/user/board/:token')
         .get(user.getBoardByToken);  
     app.route('/user/:id/token')
-        .post(user.getMsgTokenById); 
+        .get(user.getMsgTokenById); 
     app.route('/user/:id/board/:token')
         .get(user.getBoardByIdAndToken)
         .put(user.updateBoard); 
